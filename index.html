@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vidriería Berma</title>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      scroll-behavior: smooth;
+      background: #000;
+    }
+
+    /* ANIMACIONES */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+    .visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* SECCIONES */
+    section {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      padding: 40px;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed; /* PARALLAX */
+    }
+
+    section h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px rgba(0,0,0,0.7);
+    }
+
+    section p {
+      font-size: 1.2em;
+      max-width: 800px;
+      text-shadow: 0 0 10px rgba(0,0,0,0.7);
+    }
+
+    section img {
+      max-width: 60%;
+      margin-top: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+      transition: transform 0.6s ease;
+    }
+
+    section img:hover {
+      transform: scale(1.05);
+    }
+
+    /* FONDOS */
+    #Inicio { background-image: url(""); }
+    #Productos { background-image: url(""); }
+    #Compañia { background-image: url(""); }
+    #Obras { background-image: url(""); }
+    #Información técnica { background-image: url(""); }
+    #Contacto { background-image: url(""); }
+
+    /* MENÚ */
+    nav {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: rgba(0,0,0,0.6);
+      padding: 10px 20px;
+      border-radius: 8px;
+      z-index: 10;
+      backdrop-filter: blur(6px);
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: #fff;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* BOTÓN WHATSAPP */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 30px;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+      z-index: 20;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+
+    /* VISUALIZADOR 3D */
+    #viewer {
+      width: 80%;
+      height: 60vh;
+      background: rgba(0,0,0,0.5);
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="#Inicio">Inicio</a>
+    <a href="#Productos">Productos</a>
+    <a href="#Compañia">Compañia</a>
+    <a href="#Obras">Obras</a>
+    <a href="#Informacíon técnica">Informacíon técnica</a>
+    <a href="#Contacto">Contacto</a>
+  </nav>
+
+  <!-- INICIO -->
+  <section id="Inicio" class="fade-up">
+    <h1>Vidriería Berma</h1>
+    <p>Vidriería y aberturas.</p>
+    <img src="">
+    <img src="">
+    <img src="">
+  </section>
+
+  <!-- PRODUCTOS -->
+  <section id="escaneo" class="fade-up">
+    <h1>Escaneo de Piezas</h1>
+    <p>Capturamos cada detalle con precisión milimétrica.</p>
+    <img src="https://via.placeholder.com/800x400?text=Escaneo+de+pieza+por+partes">
+  </section>
+
+  <!-- COMPAÑIA -->
+  <section id="modelado" class="fade-up">
+    <h1>Servicios de Ingeniería Inversa</h1>
+    <p>Modelos CAD precisos a partir de nubes de puntos.</p>
+    <img src="https://via.placeholder.com/800x400?text=Ingenieria+Inversa+3D">
+  </section>
+
+  <!-- OBRAS -->
+  <section id="Obras" class="fade-up">
+    <h1>Sobre el Escaneo 3D</h1>
+    <p>El escaneo 3D permite capturar geometrías complejas con precisión milimétrica.</p>
+    <p>Ideal para ingeniería inversa, control dimensional y prototipado.</p>
+    <img src="https://via.placeholder.com/800x400?text=Escaneo+3D+Tecnologia">
+  </section>
+
+  <!-- INFORMACÍON TÉCNICA -->
+  <section id="Informacíon técnica" class="fade-up">
+    <h1>Informacíon técnica</h1>
+    <p>Explora xxx desde el navegador.</p>  
+    <p>xxxx, xxxxx.</p>
+    <img src="https://via.placeholder.com/800x400?text=Escaneo+3D+Tecnologia">
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="Contacto" class="fade-up">
+    <h1>Soluciones Integrales enn vidrio</h1>
+    <p>soluciones completas para tu empresa.</p>
+    <img src="https://via.placeholder.com/800x400?text=Soluciones+Industriales+3D">
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    Vidriería Berma s.a — Campana, Buenos Aires<br>
+    Contacto: XXXXXXXXX@bermasa.com — WhatsApp: +54 9 3489 XXXXXXXX
+  </footer>
+
+  <!-- BOTÓN WHATSAPP -->
+  <a class="whatsapp-btn" href="https://wa.me/5493489636502" target="_blank">💬</a>
+
+  <!-- ANIMACIONES SCROLL -->
+  <script>
+    const sections = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.3 });
+    sections.forEach(sec => observer.observe(sec));
+  </script>
+
+  <!-- LIBRERÍA MODEL-VIEWER -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+</body>
+</html>
